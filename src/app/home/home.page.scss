@@ -1,27 +1,47 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-header {
+  ion-toolbar {
+    --background: #f2f2f2; /* Cambia el color de fondo del encabezado */
+    color: #333; /* Cambia el color del texto del encabezado */
+    ion-title {
+      font-size: 24px; /* Cambia el tamaño de fuente del título del encabezado */
+      font-weight: bold; /* Hace que el título del encabezado sea más fuerte */
+      text-transform: uppercase; /* Transforma el texto del título en mayúsculas */
+    }
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-card {
+  background-color: #fff; /* Agrega un color de fondo a las tarjetas */
+  box-shadow: 0 1px 3px rgba(0,0,0,.1); /* Agrega una sombra a las tarjetas */
+  border-radius: 5px; /* Agrega bordes redondeados a las tarjetas */
+  padding: 16px; /* Agrega un relleno a las tarjetas */
+  ion-card-title {
+    font-weight: bold; /* Hace que el título de la tarjeta sea más fuerte */
+    color: #333; /* Cambia el color del título de la tarjeta */
+    margin-bottom: 10px; /* Agrega un margen inferior al título de la tarjeta */
+  }
+  ion-card-content {
+    color: #666; /* Cambia el color del texto del contenido de la tarjeta */
+    line-height: 1.5; /* Agrega un espaciado de línea al contenido de la tarjeta */
+    margin-top: 10px; /* Agrega un margen superior al contenido de la tarjeta */
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.intro-container {
+  padding: 30px;
+  background-image: url('../../assets/img/q.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: white;
 }
 
-#container a {
-  text-decoration: none;
+.intro-title {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
+
+.intro-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+

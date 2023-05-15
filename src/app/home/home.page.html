@@ -1,20 +1,34 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Animales Domésticos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="intro-container">
+    <h1 class="intro-title">Los Animales Domésticos</h1>
+    <p class="intro-text">Son una parte importante de muchas familias alrededor del mundo. Estos animales son criados y mantenidos por los humanos para compañía, protección, deporte, trabajo o por su belleza.</p>
+    <p class="intro-text">En esta aplicación podrás encontrar información sobre algunos de los animales domésticos más populares, como su alimentación, tipos y características principales.</p>
   </div>
+
+  <ion-card *ngFor="let animal of animales">
+    <ion-card-header>
+      <ion-card-title>{{ animal.nombre }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Tipo: {{ animal.tipo }}</p>
+      <p>Alimentación: {{ animal.alimentacion }}</p>
+      <p>Tamaño: {{ animal.tama }}</p>
+      <p>Adaptavilidad: {{ animal.adaptabilidad }}</p>
+      <p>Longevidad: {{ animal.longevidad}}</p>
+      <p>Salud: {{ animal.salud}}</p>
+      <br>
+      <p>{{ animal.descripcion }}</p>
+      <br>
+      <ion-img src="{{ animal.imagen }}"></ion-img>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
